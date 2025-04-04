@@ -1,89 +1,126 @@
-body{
-    background-color: #f9f7fe;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+body {
+    background-color: black; 
+    color: #00ff00; 
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 0 0 8px #00ff00;
 }
-a{
+
+a {
     text-decoration: none;
-    color: #885df1;
+    color: #00ff00;
 }
 
-.container{
-    margin:120px auto;
+.container {
+    margin: 50px auto;
     max-width: 600px;
-}
-
-header{
-    margin-bottom: 30px;
-}
-
-h1{
     text-align: center;
-    font-weight: 800;
-    font-size: 36px;
-    line-height: 1.5;
-    color:#272044
 }
 
-.form-container{
-    background-color: white;
-    margin-bottom:30px;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: 0px 20px 60px rgba (65, 50, 100, 0.08);
-    padding: 20px 20px;
-}
-form{
-
-    display: flex;
-}
-.hint{
-    line-height: 1.5;
-    margin-top: 5px;
-    font-size: 12px;
-    opacity: 0.6;
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-.instructions{
-    padding: 16px;
-    border: 1px solid rgba(39,33,66,0.5);
+.form-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #00ff00;
+    margin-bottom: 10px;
+}
+
+.instructions {
+    background: black;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    padding: 10px;
+    font-size: 20px;
+    line-height: 1.8;
     width: 80%;
-    font-size: 16px;
-    border-radius: 50px;
-    line-height: 20px;
-    color:#272044;
-}
-.submit-button{
-    margin-left: 10px;
-    background-color: #885df1;
-    color: white;
-    border: none;
-    width: 150px;
-    border-radius: 50px;
-    padding: 14px 24px;
-    font-size: 16px;
-   
+    font-family: "Share Tech Mono", monospace;
 }
 
-.lovesong{
-   font-size: 16px;
-   background-color: white;
-   padding: 20px;
-   line-height: 2;
-    border-radius: 10px;
-    border-left:3px solid #885df1; 
-    box-shadow: 0px 20px 60px rgba (65, 50, 100, 0.08);
-}
-.hidden{
-    display: none;
-}
-.song{
-    font-weight: 800;
-    color: cyan;
-}
-
-footer{
-    text-align: center;
+.submit-button {
     margin-top: 30px;
-    font-size: 14px;
-    color: #272044;
+    margin-bottom: 15px;
+    background: black;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 0 5px #00ff00;
+    font-family: "Share Tech Mono", monospace;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.submit-button:hover {
+    background: #00ff00;
+    color: black;
+    transition: 0.3s;
+}
+
+.hint {
+    font-size: 12px;
+    margin-top: 10px; 
+    color: #00ff00;
+    opacity: 0.6;
+ }
+
+.lovesong {
+    background: black;
+    color: #ffff00;
+    padding: 20px;
+    border-left: 3px solid #00ff00;
+    box-shadow: 0 0 10px #00ff00;
+    font-size: 20px;
+    line-height: 1.8;
+    font-family: "Share Tech Mono", monospace;
+}
+
+footer {
+    text-align: center;
+    font-size: 13px;
+    color: #00ff00;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #ffff00;  
+}
+
+footer a:hover {
+    color: #00bfff; 
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        rgba(0, 255, 0, 0.1) 0px,
+        transparent 2px,
+        rgba(0, 255, 0, 0.1) 4px
+    );
+    pointer-events: none;
+}
+
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.9; }
+    100% { opacity: 1; }
+}
+
+body {
+    animation: flicker 0.1s infinite alternate;
 }

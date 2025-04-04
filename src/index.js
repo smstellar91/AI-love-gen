@@ -1,6 +1,6 @@
 function displayLoveSong(response) {
 
-    console.log("love song generated");
+   
     new Typewriter('#song', {
         strings: response.data.answer,
         autoStart: true,
@@ -21,11 +21,8 @@ let instructionsInput= document.querySelector("#user-instructions");
  
   let songContainer= document.querySelector("#song");
     songContainer.classList.remove("hidden");
-    songContainer.innerHTML=`💗Generating a love song about ${instructionsInput.value}...`;
+    songContainer.innerHTML=`Generating a love song about ${instructionsInput.value}...`;
 
-  console.log("generating love song");
-  console.log(`Prompt: ${prompt}`);
-  console.log(`Context: ${context}`);
   
   axios.get(apiUrl).then(displayLoveSong);
 
