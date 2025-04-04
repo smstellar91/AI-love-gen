@@ -19,6 +19,10 @@ let instructionsInput= document.querySelector("#user-instructions");
   let context="You are a romantic song expert and love to write short 4 line love songs. Your mission is to generate a short love song, always separate it in verses, in basic HTML and separate each line with a  <br />.  Do not include a title to the song. Do not write html at the beggining.";
   let apiUrl=`https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
  
+  let songContainer= document.querySelector("#song");
+    songContainer.classList.remove("hidden");
+    songContainer.innerHTML=`💗Generating a love song about ${instructionsInput.value}...`;
+
   console.log("generating love song");
   console.log(`Prompt: ${prompt}`);
   console.log(`Context: ${context}`);
