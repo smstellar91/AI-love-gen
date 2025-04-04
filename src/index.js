@@ -16,8 +16,7 @@ function generateLoveSong(event) {
 let instructionsInput= document.querySelector("#user-instructions");
   let apiKey="d01e20d8to435efcbfa38a7b1daac0be";
   let prompt=`Generate a love song about ${instructionsInput.value}`;
-  let context=`User instructions: You are a romantic love song writer and you are writing a love song for a couple who is in love. The song should be sweet and romantic in 4 lines in basic HTML.Follow the user instructions. The song should be in English.
-  Sign the song with "Love, AI"`;
+  let context="You are a romantic song expert and love to write short 4 line love songs. Your mission is to generate a short love song, always separate it in verses, in basic HTML and separate each line with a  <br />.  Do not include a title to the song. Do not write html at the beggining.";
   let apiUrl=`https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
  
   console.log("generating love song");
