@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="src/style.css">
     <title>Love Generator</title>
 </head>
@@ -12,14 +13,13 @@
     <h1>AI Love Generator</h1>
     </header>
     <main>
-        <form>
-<input type="text" placeholder="Enter the words you want to include in your love song"  autofocus required autocomplete="off" class="instructions"/>
+        <form id="love-generator-form">
+<input type="text" placeholder="Enter the words you want to include in your love song" 
+autofocus required autocomplete="off" class="instructions"/>
 <input type="submit" class="submit-button"/>
         </form>
-        <div class="lovesong">
-            Who knows how long I've loved you?
-            <br/>
-            You know I love you still
+        <div class="lovesong" id="song">
+            
         </div>
     </main>
 
